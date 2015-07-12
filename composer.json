@@ -1,0 +1,29 @@
+{
+    "name": "calculator",
+    "type": "console application",
+    "description": "Tool for calculating your mortgage status",
+    "keywords": ["mortgage, income, interest-rate"],
+    "homepage": "https://example.com/",
+    "license": "proprietary",
+    "autoload": {
+        "classmap": ["app/"]
+    },
+    "require": {
+        "php" : "5.6.*",
+        "phpunit/phpunit": "4.7.*",
+        "symfony/console" : "2.7.*"
+
+    },
+    "bin": ["bin/mortgage"],
+    "config": {
+        "bin-dir": "bin",
+        "vendor-dir": "vendor",
+        "discard-changes": true
+    },
+    "post-install-cmd": [
+        "php bin/phpunit --configuration app/phpunit.xml"
+    ],
+    "post-update-cmd": [
+        "php bin/phpunit --configuration app/phpunit.xml"
+    ]
+}

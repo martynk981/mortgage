@@ -1,0 +1,7 @@
+#!/usr/bin/env php
+<?php
+ini_set('display_errors', 0);
+require_once __DIR__ . '/../vendor/autoload.php';
+$app = new App\Calculator\Console\Application('1.0');
+$app->run();
+
